@@ -25,7 +25,7 @@ public class TotalDescuento {
 		
 		
 	}
-	else if(cantidad < 9999 ) {
+	else if(cantidad < 10000 ) {
 		
 			System.out.println("Tu precio final es de:" + ((cantidad) - (cantidad * 20)/100));
 			
@@ -33,7 +33,7 @@ public class TotalDescuento {
 		
 		
 	}
-	else if(cantidad >= 10000 ) {
+	else if(cantidad > 10000 ) {
 	
 			System.out.println("Tu precio final es de:" + ((cantidad) - (cantidad * 30)/100));
 			

@@ -13,7 +13,7 @@ System.out.println("Introduce 3 numeros:");
 4 4 1
 5 4 4  4 5 4
 4 4 5 5 5 5*/
-		//esta clase pide inf al usuario
+		//esta clase pide información al usuario
 		Scanner scanner = new Scanner(System.in);
 		int numero1 = scanner.nextInt();
 		int numero2 = scanner.nextInt();
