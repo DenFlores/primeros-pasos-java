@@ -1,8 +1,13 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 
@@ -72,7 +77,7 @@ public class Colecciones {
 			System.out.println(fruta);
 		}*/
 		
-		/*List, cuenta con 2 implementaciones, se permiten elementos
+		/*LIST, cuenta con 2 implementaciones, se permiten elementos
 		 * duplicados, accede a elementos especificos, busca elementos
 		 */
 		//ArrayList
@@ -126,6 +131,80 @@ public class Colecciones {
 		System.out.println("**********");
 		
 		
+	    //LinkedList
+		/*Es una lista doblemente enlazada,
+		 * Es más rapido para insertar y remover elementos */
+		List<String> digimones = new LinkedList<String>();
+		digimones.add("Agumon");
+		digimones.add("Patamon");
+		digimones.add("Angemon");
+		digimones.add("Andromon");
+		digimones.add("greymon");
+		
+		for(String digimon : digimones) {
+			System.out.println(digimon);
+			
+		}
+		System.out.println("*********");
+		
+		//MAP, asocia claves a valores, no contiene claves duplicadas.
+		//Solo puede tener un valor asociado
+		
+		//HashMap
+		//Tiene mejor rendimiento, pero no garantiza un orden
+		//a la hora de hacer iteraciones
+		
+		Map<Integer, String> usuarios = new HashMap<Integer, String>();
+		usuarios.put(1, "Carlos Eduardo");
+		usuarios.put(2, "Deny Flores");
+		usuarios.put(3, "Rebeca Cuevas");
+		//HashMap no acepta claves duplicadas
+		
+		System.out.println(usuarios.get(3));
+		
+		//keySet
+		/*permite recuperar el nombre de la clave*/
+		
+		System.out.println(usuarios.keySet());
+		
+		
+		//values
+		/*nos permite recuperar el valor directamente, los ordena*/
+		System.out.println(usuarios.values());
+		
+		//TreeMap
+		Map<Integer, String> tamales = new TreeMap<Integer, String>();
+		
+		tamales.put(1, "Mole rojo");
+		tamales.put(2, "Salsa verde");
+		tamales.put(3, "Gansito");
+		tamales.put(4, "Rajas");
+		System.out.println("******************");
+		
+		System.out.println(tamales.keySet());
+		System.out.println(tamales.values());
+		
+		System.out.println(tamales);
+		
+		tamales.entrySet().forEach(elemento ->{
+		System.out.println(elemento.getKey().toString() + 
+				elemento.getValue().toString());
+		});
+			
+		//LinkedHashMap
+		//guarda los elementos, segun el orden en que se inserten
+		Map<Integer, String> Carros = new LinkedHashMap<Integer, String>();
+		Carros.put(1, "Volvo");
+		Carros.put(22, "Pointer");
+		Carros.put(32, "Mustang");
+		Carros.put(45, "Atos");
+		
+		System.out.println("**************");
+		System.out.println(Carros.keySet());
+		System.out.println(Carros.values());
+		
+		
+				
 		
 		
 		
@@ -134,10 +213,7 @@ public class Colecciones {
 		
 		
 		
-		
-		//LinkedList
-		
-		
+
 		
 		
 	}
